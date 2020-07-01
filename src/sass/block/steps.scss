@@ -22,7 +22,12 @@
     font-family: "PlayfairDisplay", serif;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: 100%;
+    transition: .3s background-size;
+
+    &:hover {
+        background-size: 110%;
+    }
 
     &:nth-child(1) {
         background-image: url('../media/steps/img-1.jpg');
@@ -84,7 +89,9 @@
 }
 
 @media (max-width: 480px) {
-    .container {
-        max-width: 100%;
+    .steps__title {
+        font-size: 29px;
+        line-height: 1.2;
+        text-transform: uppercase;
     }
 }

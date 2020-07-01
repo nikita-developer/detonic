@@ -78,6 +78,20 @@
 
 @media (max-width: 480px) {
     .warning__title {
-        font-size: 32px;
+        font-size: 20px;
+        text-transform: uppercase;
+
+        & span {
+            display: inline;
+        }
+    }
+
+    .warning__subtitle {
+        font-size: 18px;
+    }
+
+    .warning__list-name {
+        font-size: 22px;
+        line-height: 1.2;
     }
 }

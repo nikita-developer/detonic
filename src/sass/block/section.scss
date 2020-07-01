@@ -92,7 +92,7 @@
         }
 
         &_footer {
-            padding-top: 80px;de
+            padding-top: 80px;
         }
 
         &_facts {
@@ -142,8 +142,11 @@
 
 @media (max-width: 480px) {
     .section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+
         &_ingredients {
-            padding-top: 60px;
+            padding-top: 30px;
         }
     }
 
