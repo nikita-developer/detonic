@@ -23,7 +23,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100%;
-    transition: .3s background-size;
+    transition: .3s !important;
 
     &:hover {
         background-size: 110%;
