@@ -1,0 +1,75 @@
+
+.symptoms {
+    max-width: 550px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    line-height: 60px;
+}
+
+.symptoms__title {
+    font-size: 62px;
+    color: #282828;
+
+    & mark {
+        color: #f12748;
+    }
+}
+
+.symptoms__box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px -10px -20px -10px;
+}
+
+.symptoms__item {
+    padding: 15px;
+    margin: 0 10px 20px 10px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #fff;
+    background-color: rgb(40, 40, 40);
+    background-image: linear-gradient(131deg, rgba(40, 40, 40, 1) 0%, rgba(229, 39, 70, 1) 100%);
+    border-radius: 5px;
+
+    &:nth-child(1) {
+        max-width: 130px;
+    }
+
+    &:nth-child(2) {
+        max-width: 220px;
+    }
+
+    &:nth-child(3) {
+        max-width: 260px;
+    }
+
+    &:nth-child(4) {
+        max-width: 245px;
+    }
+
+    &:nth-child(5) {
+        max-width: 190px;
+    }
+
+    &:nth-child(6) {
+        max-width: 195px;
+    }
+}
+
+@media (max-width: 768px) {
+    .symptoms__box {
+        & .symptoms__item {
+            max-width: 100%;
+            line-height: 1.2;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .symptoms__box {
+        & .symptoms__item {
+            width: 100%;
+        }
+    }
+}

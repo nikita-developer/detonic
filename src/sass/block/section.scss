@@ -1,0 +1,153 @@
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &_face {
+        background-image: url("../media/section/face.jpg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+    }
+
+    &_symptoms {
+        padding-top: 150px;
+        background-image: url("../media/section/symptoms.jpg");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+    }
+
+    &_footer {
+        padding-top: 150px;
+        background-image: url("../media/section/footer.jpg");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+    }
+
+    &_warning {
+        background-image: url("../media/section/warning.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    &_facts {
+        background-image: url("../media/section/facts.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    &_treatment {
+        padding-bottom: 130px;
+        background-image: url("../media/section/treatment.jpg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+    }
+
+    &_ingredients {
+        padding-top: 120px;
+        background-image: url("../media/section/ingredients.jpg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+    }
+
+    &_professional {
+        position: relative;
+        overflow: hidden;
+        background-image: url("../media/section/professional.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+.section__title {
+    font-family: "PlayfairDisplay", serif;
+    font-weight: 800;
+}
+
+.section__professional {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    min-width: 434px;
+    margin-left: 350px;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 1030px) {
+    .section {
+        &_face {
+            background-image: url("../media/section/face-1030.jpg");
+        }
+
+        &_symptoms {
+            padding-top: 80px;
+            background-image: url("../media/section/symptoms-1030.jpg");
+        }
+
+        &_footer {
+            padding-top: 80px;de
+        }
+
+        &_facts {
+            background-image: url("../media/section/facts-1030.jpg");
+            background-position: bottom right;
+            background-size: auto;
+        }
+
+        &_treatment {
+            background-image: url("../media/section/treatment-1030.jpg");
+        }
+    }
+
+    .section__title {
+        font-size: 40px;
+        line-height: 1;
+    }
+
+    .section__professional {
+        min-width: 315px;
+        max-width: 315px;
+        margin-left: 290px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        &_face {
+            background-image: url("../media/section/face-768.jpg");
+        }
+
+        &_warning {
+            background-image: url("../media/section/warning-768.jpg");
+        }
+
+        &_treatment {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            background-image: url("../media/section/treatment-768.jpg");
+        }
+    }
+
+    .section__professional {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        &_ingredients {
+            padding-top: 60px;
+        }
+    }
+
+    .section__title {
+        text-align: center;
+    }
+}

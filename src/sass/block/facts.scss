@@ -1,0 +1,175 @@
+.facts {
+    position: relative;
+}
+
+.facts__title {
+    max-width: 305px;
+    margin-bottom: 40px;
+    font-size: 62px;
+    line-height: 60px;
+
+    & mark {
+        color: #f12748;
+    }
+}
+
+.facts__list {
+    max-width: 500px;
+}
+
+.facts__item {
+    position: relative;
+    padding: 20px 20px 20px 100px;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+
+    & + & {
+        margin-top: 11px;
+    }
+}
+
+.facts-count {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: "PlayfairDisplay", serif;
+    font-size: 92px;
+    font-weight: 700;
+    line-height: 23px;
+    color: #c3c3c3;
+    letter-spacing: -5px;
+}
+
+.facts__description {
+    font-size: 17px;
+    line-height: 21px;
+
+    & mark {
+        display: block;
+        font-weight: 600;
+    }
+}
+
+.facts__media {
+    position: absolute;
+    right: 55px;
+    bottom: 0;
+    width: 408px;
+    height: 669px;
+    background-image: url("../media/facts/media.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.facts__media-explanation {
+    position: absolute;
+    max-width: 110px;
+    font-weight: 500;
+
+    &::before {
+        position: absolute;
+        content: '';
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &:first-child {
+        bottom: 82px;
+        left: 0;
+
+        &::before {
+            top: -42px;
+            right: -3px;
+            width: 10px;
+            height: 51px;
+            background-image: url("../media/facts/arrow-1.png");
+        }
+    }
+
+    &:last-child {
+        right: -55px;
+        bottom: 5px;
+
+        &::before {
+            top: -42px;
+            left: -25px;
+            width: 37px;
+            height: 39px;
+            background-image: url("../media/facts/arrow-2.png");
+        }
+    }
+}
+
+@media (max-width: 1030px) {
+    .facts__title {
+        max-width: 340px;
+    }
+
+    .facts__list {
+        max-width: 385px;
+    }
+
+    .facts__media {
+        right: 25px;
+        bottom: 180px;
+        width: 300px;
+        height: 492px;
+    }
+
+    .facts__media-explanation {
+        &:first-child {
+            bottom: 50px;
+        }
+
+        &:last-child {
+            right: -25px;
+            bottom: 160px;
+
+            &::before {
+                top: 70px;
+                transform: rotate(-133deg);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .facts__media {
+        position: relative;
+        right: auto;
+        bottom: auto;
+    }
+
+    .facts__list {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .facts__media {
+        width: 270px;
+        height: 442px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .facts__media-explanation {
+        font-size: 14px;
+    }
+
+    .facts-count {
+        left: 15px;
+        font-size: 60px;
+        letter-spacing: -2px;
+    }
+
+    .facts__item {
+        padding-left: 70px;
+    }
+
+    .facts__description {
+        & mark {
+            display: inline;
+        }
+    }
+}

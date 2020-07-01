@@ -1,0 +1,226 @@
+
+.ingredients {
+    position: relative;
+}
+
+.ingredients__title {
+    margin-bottom: 30px;
+    font-size: 47px;
+    line-height: 46px;
+    text-align: center;
+
+    & mark {
+        color: #13ae8b;
+    }
+}
+
+.ingredients__product {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 80px;
+    transform: translate(-50%, -50%);
+
+    &::before {
+        position: absolute;
+        bottom: -15px;
+        left: -113px;
+        z-index: -1;
+        width: 515px;
+        height: 169px;
+        content: '';
+        background-image: url("../media/product-before-2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &::after {
+        position: absolute;
+        top: -100px;
+        left: 50%;
+        z-index: -1;
+        width: 435px;
+        height: 433px;
+        content: '';
+        background-image: url("../media/product-after.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: translateX(-50%);
+    }
+}
+
+.ingredients__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -50px;
+}
+
+.ingredients__item {
+    width: 50%;
+    margin-bottom: 50px;
+
+    &_bottom {
+        width: 100%;
+        max-width: 640px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.ingredients__head {
+    display: flex;
+    align-items: center;
+    max-width: 266px;
+    margin-bottom: 13px;
+
+    &_right {
+        flex-direction: row-reverse;
+        margin-left: auto;
+        text-align: right;
+    }
+}
+
+.ingredients__media {
+    flex: 0 0 85px;
+    height: 85px;
+    margin-right: 15px;
+    overflow: hidden;
+    border: 3px solid #14ceda;
+    border-radius: 5px;
+
+    &_right {
+        margin-right: 0;
+        margin-left: 15px;
+    }
+}
+
+.ingredients__name {
+    width: calc(100% - 100px);
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: "PlayfairDisplay", serif;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 23px;
+    color: #13ae8b;
+}
+
+.ingredients__description {
+    max-width: 266px;
+
+    & span {
+        display: block;
+    }
+
+    &_right {
+        margin-left: auto;
+        text-align: right;
+    }
+
+    &_bottom {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1030px) {
+    .ingredients__product {
+        max-width: 170px;
+
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .ingredients__product {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 40px;
+        margin-left: auto;
+        transform: translate(0, 0);
+
+        &::before {
+            bottom: -11px;
+            left: -90px;
+            display: block;
+            width: 340px;
+            height: 111px;
+        }
+    }
+
+    .ingredients__item {
+        width: calc(50% - 7px);
+
+        &_bottom {
+            width: 100%;
+        }
+    }
+
+    .ingredients__name {
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    .ingredients__media {
+        margin-right: 10px;
+
+        &_right {
+            margin-right: 0;
+            margin-left: 10px;
+        }
+    }
+
+    .ingredients__description {
+        & span {
+            display: inline;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .ingredients__body {
+        margin-bottom: -25px;
+    }
+
+    .ingredients__item {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .ingredients__head {
+        flex-direction: row;
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .ingredients__description {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .ingredients__media {
+        margin-right: 10px;
+        margin-left: 0;
+    }
+
+    .ingredients__title {
+        font-size: 30px;
+    }
+
+    .ingredients__product {
+        &::before {
+            left: -78px;
+            width: 320px;
+            height: 105px;
+        }
+    }
+}

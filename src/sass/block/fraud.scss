@@ -1,0 +1,142 @@
+
+.fraud {
+    position: relative;
+    display: flex;
+    padding: 35px 20px;
+    background-image: url('../media/fraud/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid #696969;
+    border-radius: 3px;
+}
+
+.fraud__head {
+    max-width: 465px;
+}
+
+.fraud__title {
+    margin-bottom: 30px;
+    font-size: 52px;
+    line-height: 51px;
+    color: #282828;
+}
+
+.fraud__subtitle {
+    font-size: 24px;
+    color: #f50c42;
+
+    & span {
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 18px;
+        color: #282828;
+    }
+}
+
+.fraud__product {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 221px;
+    margin-top: 45px;
+    margin-left: 130px;
+    transform: translate(-50%, -50%);
+
+    &::before {
+        position: absolute;
+        bottom: -15px;
+        left: -107px;
+        z-index: -1;
+        width: 435px;
+        height: 143px;
+        content: '';
+        background-image: url("../media/product-before.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.fraud__media {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 220px;
+    margin-left: auto;
+
+    & img {
+        width: 96px;
+        height: 96px;
+        margin: 7px;
+    }
+}
+
+@media (max-width: 1030px) {
+    .fraud {
+        flex-direction: column;
+    }
+
+    .fraud__head {
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .fraud__product {
+        top: auto;
+        bottom: 35px;
+        left: 20px;
+        max-width: 145px;
+        margin-left: 108px;
+        transform: translate(0, 0);
+
+        &::before {
+            width: 340px;
+            height: 111px;
+        }
+    }
+
+    .fraud__media {
+        margin-right: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fraud {
+        background-image: url('../media/fraud/bg-768.jpg');
+    }
+
+    .fraud__head {
+        margin-bottom: 30px;
+    }
+
+    .fraud__product {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 30px;
+        margin-left: auto;
+    }
+
+    .fraud__media {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .fraud__product {
+        &::before {
+            bottom: -10px;
+            left: -66px;
+            width: 280px;
+            height: 92px;
+        }
+    }
+
+    .fraud__title {
+        font-size: 32px;
+    }
+}
