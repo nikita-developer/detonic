@@ -88,5 +88,12 @@
     .professional__info {
         padding-right: 15px;
         padding-left: 15px;
+
+        & p {
+            & mark {
+                font-size: 19px;
+                line-height: 1;
+            }
+        }
     }
 }

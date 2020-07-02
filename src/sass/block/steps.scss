@@ -22,7 +22,7 @@
     font-family: "PlayfairDisplay", serif;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 100%;
+    background-size: 101%;
     transition: .3s !important;
 
     &:hover {
@@ -92,6 +92,9 @@
     .steps__title {
         font-size: 29px;
         line-height: 1.2;
-        text-transform: uppercase;
+
+        & mark {
+            display: block;
+        }
     }
 }
